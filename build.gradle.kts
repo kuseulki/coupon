@@ -42,12 +42,15 @@ subprojects {
 		runtimeOnly("com.h2database:h2")
 		runtimeOnly("com.mysql:mysql-connector-j")
 		implementation("org.springframework.boot:spring-boot-starter")
-//		implementation("com.querydsl:querydsl-jpa:5.0.0:jakarta")
 //        implementation("org.springframework.boot:spring-boot-starter-actuator")
 //        implementation("io.micrometer:micrometer-registry-prometheus")
-//		annotationProcessor("com.querydsl:querydsl-apt:5.0.0:jakarta")
-//		annotationProcessor("jakarta.annotation:jakarta.annotation-api")
-//		annotationProcessor("jakarta.persistence:jakarta.persistence-api")
+
+		//QueryDsl
+		implementation("com.querydsl:querydsl-jpa:5.0.0:jakarta")
+		annotationProcessor("com.querydsl:querydsl-apt:5.0.0:jakarta")
+		annotationProcessor("jakarta.annotation:jakarta.annotation-api")
+		annotationProcessor("jakarta.persistence:jakarta.persistence-api")
+
 		testImplementation("org.springframework.boot:spring-boot-starter-test")
 	}
 }
