@@ -25,14 +25,14 @@ public class CouponIssue extends BaseTimeEntity {
     private Long id;
 
     @Column(nullable = false)
-    private Long couponId;      // 쿠폰 ID
+    private Long couponId;                  // 쿠폰 ID
 
     @Column(nullable = false)
-    private Long userId;        // 유저 ID
+    private Long userId;                    // 유저 ID
 
     @Column(nullable = false)
     @CreatedDate
     private LocalDateTime dateIssued;       // 발급 일시
 
-    private LocalDateTime dateUsed;     // 사용 일시
+    private LocalDateTime dateUsed;         // 사용 일시
 }
